@@ -1,0 +1,28 @@
+script.
+  ;(function() {
+    "use strict";
+
+    function autoTrackLinks() {
+      function trackClick(category, label) {
+        function clean(str) {
+          return (str && str.trim().replace(/\s\s+/g, " ")) || "n/a";
+        };
+        gtag("event", "click", {
+          event_category: clean(category),
+          event_label: clean(label)
+        });
+      };
+      var links = document.querySelectorAll("a");
+      var linksLen = links.length;
+      for (var i = 0; i < linksLen; i++) {
+        (function() {
+          var link = links[i];
+          link.addEventListener("click", function(e) {
+            trackClick(link.textContent, link.getAttribute("href"));
+          });
+        })();
+      }
+    };
+    autoTrackLinks();
+
+  })();

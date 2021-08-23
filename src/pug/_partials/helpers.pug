@@ -1,0 +1,19 @@
+//- +body
+mixin body
+  body(bgcolor='#ffffff' marginwidth='0' marginheight='0' topmargin='0' leftmargin='0' offset='0')&attributes(attributes)
+    if block
+      block
+    else
+      span &nbsp;
+
+//- +w [wrapper]
+mixin w(w='100%')
+  center.root-center
+    table.root-table(align='center' width='100%')
+      tr.root-row
+        th.root-cell(align='center' valign='top' width=w)&attributes(attributes)
+          table.root-table-inner(align='center' width=w)
+            if block
+              block
+            else
+              span &nbsp;

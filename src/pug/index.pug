@@ -1,0 +1,21 @@
+extends _partials/layout.pug
+include _partials/helpers.pug
+
+block prepend content
+  - var example = 'example';
+
+  .preheader
+    | #{preheader}
+
+  +w(600)
+    //- view in browser
+    tr: th(align='right' valign='top').tar: table(align='right' width='100%')
+      tr: th(align='right' valign='top').txt.fz9.p1
+        a(href='#' target='_blank' rel='noopener noreferrer').tdu
+          strong.fwn View Online
+
+    include content/shared.pug
+
+    //- tracking
+    //- tr: th(align='center' valign='top')
+    //-   img.trk(src='#' alt='' width='1' height='1')

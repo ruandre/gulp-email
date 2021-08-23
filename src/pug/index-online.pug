@@ -1,0 +1,17 @@
+extends _partials/layout.pug
+include _partials/helpers.pug
+
+block title
+  | #{title}
+
+block prepend head
+  include _partials/meta.pug
+  include _partials/gtag.pug
+
+block prepend content
+  - var example = 'example';
+
+  +w(600)
+    include content/shared.pug
+
+  include _partials/gtag-links.pug

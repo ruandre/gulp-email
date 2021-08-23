@@ -1,0 +1,18 @@
+include helpers.pug
+
+doctype transitional
+html(lang='en' xmlns:v='urn:schemas-microsoft-com:vml' xmlns:o='urn:schemas-microsoft-com:office:office')
+  head
+    meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
+    <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
+    title
+      block title
+        |
+    meta(name='viewport' content='initial-scale=1')
+    meta(name='x-apple-disable-message-reformatting')
+    <!--[if mso]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+    link(rel='stylesheet' href='../../dist/inline.css' inline)
+    <!-- embed -->
+    block head
+  +body
+    block content
