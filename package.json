@@ -4,7 +4,7 @@
     "build": "rimraf dist/ && gulp && rimraf dist/*.css"
   },
   "devDependencies": {
-    "browser-sync": "2.27.9",
+    "browser-sync": "2.27.10",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "8.0.0",
     "gulp-data": "1.3.1",
@@ -17,7 +17,7 @@
     "gulp-stylus": "2.7.1",
     "he": "1.2.0",
     "rimraf": "3.0.2",
-    "stylus": "0.56.0",
+    "stylus": "0.58.1",
     "through2": "4.0.2"
   }
 }
